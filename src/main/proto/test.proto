@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package example.test;
+
+message TestMsg {
+  uint32 id = 1;
+  string name = 2;
+  bool is_true = 4;
+  repeated string others = 5;
+
+}
+
+
+message Cleaner {
+  uint32 id = 1;
+  repeated string valu = 2;
+}
+
+
+message ThirdMsg {
+  int64 id = 1;
+  repeated float fl = 2;
+}
+
+message Composed {
+  TestMsg t1 = 1;
+  Cleaner c1 = 2;
+  ThirdMsg t2 = 3;
+}
